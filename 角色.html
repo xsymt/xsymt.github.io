@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫威</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .box {
+            overflow: hidden;
+            width: 610px;
+            margin: 100px auto;
+            background-color: #fff;
+        }
+        
+        .box li {
+            width: 25%;
+            height: 100px;
+            list-style: none;
+            float: left;
+            cursor: pointer;
+            border: 1px solid #fff;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li><img src="绯红女巫.jpg" alt=""></li>
+        <li><img src="钢铁侠.jpg" alt=""></li>
+        <li><img src="黑寡妇.jpg" alt=""></li>
+        <li><img src="雷神.jpeg" alt=""></li>
+        <li><img src="美国队长.jpg" alt=""></li>
+        <li><img src="绿巨人.jpg" alt=""></li>
+        <li><img src="奇异博士.jpg" alt=""></li>
+        <li><img src="蜘蛛侠.jpg" alt=""></li>
+        <li><img src="黑豹.jpg" alt=""></li>
+        <li><img src="蚁人.jpg" alt=""></li>
+        <li><img src="惊奇队长.jpg" alt=""></li>
+        <li><img src="灭霸.jpg" alt=""></li>
+    </ul>
+    <script>
+        var pics = document.querySelector('.box').querySelectorAll('img');
+        console.log(pics);
+        for (var i = 0; i < pics.length; i++) {
+            pics[i].onclick = function() {
+                console.log(this.src);
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+     <div class="box">
+        <from action="">
+            <a href="视频.html"><input type="button" value="视频"/></a>
+        </from>
+    </div>
+</body>
+
+</html>
